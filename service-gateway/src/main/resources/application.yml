@@ -1,0 +1,10 @@
+server:
+  port: 2763
+
+spring:
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+          lowerCaseServiceId: true

@@ -1,0 +1,16 @@
+profiles:
+  active: qa
+
+spring:
+  application:
+    name: provider
+  cloud:
+    nacos:
+      discovery:
+        namespace: 4ddd2232-569d-472a-836c-050948d3a713
+      config:
+        file-extension: yaml
+        prefix: provider
+        namespace: 4ddd2232-569d-472a-836c-050948d3a713
+        group: DEFAULT_GROUP
+      server-addr: 127.0.0.1:8848

@@ -1,0 +1,17 @@
+profiles:
+  active: dev
+
+spring:
+  application:
+    name: gateway
+  cloud:
+    nacos:
+      discovery:
+        namespace: afb8cee4-5569-482b-b849-600b64362352
+      config:
+        file-extension: yaml
+        prefix: gateway
+        namespace: afb8cee4-5569-482b-b849-600b64362352
+        group: DEFAULT_GROUP
+      server-addr: 127.0.0.1:8848
+
