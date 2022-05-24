@@ -1,3 +1,22 @@
 server:
   port: 8561
 
+
+spring:
+  cloud:
+    sentinel:
+      transport:
+        port: 18561
+        dashboard: localhost:8748
+      datasource:
+        ds1:
+          nacos:
+            namespace: ${spring.cloud.nacos.discovery.namespace}
+            server-addr: ${spring.cloud.nacos.server-addr}
+            dataId: ${spring.application.name}-flow-rules
+            groupId: SENTINEL_GROUP
+            rule-type: flow
+
+feign:
+  sentinel:
+    enabled: true
